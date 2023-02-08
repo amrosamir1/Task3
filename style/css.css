@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+width: 100%;
+background-color: rgba(0, 0, 0, 0);
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 999;
+}
+
+.contents{
+    width: 100%;
+}
+
+.contents ul li{
+    float: right;
+    list-style: none;
+    margin: 10px 15px 0 0;
+}
+
+.contents ul li a{
+    text-decoration: none;
+    margin: 0 15px;
+    color: white;
+    font-size: 25px;
+}
+
+.contents img{
+    width: 90px;
+    height: 40px;
+    float: left;
+    margin: 10px 0 0 30px;
+}
+
+.maincard {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.maincardimg {
+    width: 100%;
+    height: 100%;
+}
+
+.maincardimg img {
+    width: 100%;
+    height: 100%;
+}
+
+.overlay1 {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    color: white;
+    opacity: 0;
+    transition: 2s;
+}
+
+.overlay1 h2 {
+    position: absolute;
+    bottom: 600px;
+    right: 50%;
+    transform: translate(50%, 50%);
+    transition: 2s;
+}
+
+.maincard:hover .overlay1 {
+    opacity: 1;
+}
+
+.maincard:hover .overlay1 h2 {
+    bottom: 350px;
+}
+
+.cards {
+    width: 100%;
+    height: 430px;
+    display: flex;
+    margin-top: 5px;
+
+}
+
+.card {
+    width: 20%;
+    height: 45vh;
+    margin: 35px 2.5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    text-align: center;
+    background-color: rgba(59, 58, 58, 0.6);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 2s;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+    transform: rotate(360deg);
+}
+
+.caption {
+    position: absolute;
+    opacity: 0;
+}
+
+.card:hover .overlay .caption {
+    opacity: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 2s 2s;
+}
